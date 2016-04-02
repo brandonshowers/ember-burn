@@ -1,7 +1,7 @@
 {
   "name": "ember-tdd-boilerplate",
   "version": "0.0.0",
-  "description": "Small description for ember-tdd-boilerplate goes here",
+  "description": "TDD boilerplate for Ember projects",
   "private": true,
   "directories": {
     "doc": "doc",
@@ -12,11 +12,27 @@
     "start": "ember server",
     "test": "ember test"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brandonshowers/ember-tdd-boilerplate.git"
+  },
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "keywords": [
+    "tdd",
+    "mocha",
+    "chai",
+    "javascript",
+    "boilerplate",
+    "testem",
+    "rawgithub",
+    "rawgit"
+  ],
+  "author": "Brandon Showers <brandon.showers@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/brandonshowers/ember-tdd-boilerplate/issues"
+  },
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.2",
