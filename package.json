@@ -1,7 +1,7 @@
 {
-  "name": "ember-tdd-boilerplate",
+  "name": "ember-burn",
   "version": "0.0.0",
-  "description": "TDD boilerplate for Ember projects",
+  "description": "Dancing with Ember",
   "private": true,
   "directories": {
     "doc": "doc",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brandonshowers/ember-tdd-boilerplate.git"
+    "url": "git+https://github.com/brandonshowers/ember-burn.git"
   },
   "engines": {
     "node": ">= 0.10.0"
@@ -31,7 +31,7 @@
   ],
   "author": "Brandon Showers <brandon.showers@gmail.com>",
   "bugs": {
-    "url": "https://github.com/brandonshowers/ember-tdd-boilerplate/issues"
+    "url": "https://github.com/brandonshowers/ember-burn/issues"
   },
   "license": "MIT",
   "devDependencies": {

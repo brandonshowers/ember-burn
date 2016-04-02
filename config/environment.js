@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'ember-tdd-boilerplate',
+    modulePrefix: 'ember-burn',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
