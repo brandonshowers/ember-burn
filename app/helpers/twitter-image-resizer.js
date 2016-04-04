@@ -15,16 +15,24 @@ export function twitterImageResizer(width, height) {
     if (height > maxHeight || width > maxWidth) {
       if (aspectRatio >= 1.5) {
         adjustedHeight = 600 * height / width;
-        adjustedWidth = adjustedHeight * aspectRatio;
+        adjustedWidth = Math.round(adjustedHeight) * aspectRatio;
+
+        if (adjustedWidth > 600) {
+          adjustedWidth = 600;
+        }
       } else if (aspectRatio > 1) {
         adjustedHeight = 600 * height / width;
         adjustedWidth = adjustedHeight * aspectRatio;
-      } else if (aspectRatio === 0.25 && height > 1200) {
-        adjustedWidth = 1200 * 0.26666666666667;
-        adjustedHeight = adjustedWidth * height * .9375 / width;
-      } else if (aspectRatio < 1) {
-        adjustedWidth = 1200 * aspectRatio;
+      } else if (aspectRatio < 1 && aspectRatio > 0.5) {
+        adjustedWidth = 600;
         adjustedHeight = adjustedWidth * height / width;
+      } else if (aspectRatio <= 0.5) {
+        adjustedWidth = 1200 * aspectRatio;
+        adjustedHeight = Math.round(adjustedWidth) * height / width;
+
+        if (adjustedHeight > 1200) {
+          adjustedHeight = 1200;
+        }
       }
     } else {
       adjustedWidth = width;
@@ -32,8 +40,10 @@ export function twitterImageResizer(width, height) {
     }
 
     return {
-      adjustedWidth: adjustedWidth,
-      adjustedHeight: adjustedHeight
+      adjustedWidth: Math.round(adjustedWidth),
+      // adjustedWidth: adjustedWidth,
+      adjustedHeight: Math.round(adjustedHeight)
+      // adjustedHeight: adjustedHeight
     }
   } else {
     throw new Error('Twitter Image Resizer: height and width required');
