@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/brandonshowers/ember-burn.svg?branch=master)](https://travis-ci.org/brandonshowers/ember-burn)
+
 # Ember Burn
 
 This README outlines the details of collaborating on this Ember application.
