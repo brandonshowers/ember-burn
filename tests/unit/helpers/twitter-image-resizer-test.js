@@ -32,19 +32,23 @@ test('image resizing', function(assert) {
 		);
 	};
 
-	parseAssertDeepEqual(1024, 668, 599, 391);
-	parseAssertDeepEqual(1918, 1252, 600, 392);
-	parseAssertDeepEqual(1850, 1230, 600, 399);
-	parseAssertDeepEqual(3228, 2153, 600, 400);
+	parseAssertDeepEqual(100, 1000, 100, 1000);
+	parseAssertDeepEqual(100, 1200, 100, 1200);
+	parseAssertDeepEqual(100, 1500, 80, 1200);
 	parseAssertDeepEqual(140, 93, 140, 93);
-	parseAssertDeepEqual(450, 300, 450, 300);
-	parseAssertDeepEqual(960, 640, 600, 400);
-	parseAssertDeepEqual(1850, 1234, 600, 400);
-	parseAssertDeepEqual(800, 4943, 194, 1199);
-	parseAssertDeepEqual(640, 3954, 194, 1199);
-	parseAssertDeepEqual(480, 2996, 192, 1198);
 	parseAssertDeepEqual(320, 1977, 194, 1199);
+	parseAssertDeepEqual(400, 1200, 400, 1200);
+	parseAssertDeepEqual(450, 300, 450, 300);
+	parseAssertDeepEqual(480, 2996, 192, 1198);
+	parseAssertDeepEqual(575, 800, 575, 800);
+	parseAssertDeepEqual(600, 600, 600, 600);
+	parseAssertDeepEqual(600, 1200, 600, 1200);
+	parseAssertDeepEqual(600, 1300, 554, 1200);
+	parseAssertDeepEqual(640, 3954, 194, 1199);
+	parseAssertDeepEqual(700, 700, 600, 600);
+	parseAssertDeepEqual(800, 4943, 194, 1199);
 	parseAssertDeepEqual(800, 500, 600, 375);
+	parseAssertDeepEqual(800, 800, 600, 600);
 	parseAssertDeepEqual(800, 1000, 600, 750);
 	parseAssertDeepEqual(800, 1200, 600, 900);
 	parseAssertDeepEqual(800, 1500, 600, 1125);
@@ -61,9 +65,17 @@ test('image resizing', function(assert) {
 	parseAssertDeepEqual(800, 3250, 295, 1198);
 	parseAssertDeepEqual(800, 3500, 274, 1199);
 	parseAssertDeepEqual(800, 4000, 240, 1200);
+	parseAssertDeepEqual(960, 640, 600, 400);
+	parseAssertDeepEqual(1000, 100, 600, 60);
 	parseAssertDeepEqual(1000, 4000, 300, 1200);
 	parseAssertDeepEqual(1000, 4625, 259, 1198);
 	parseAssertDeepEqual(1000, 5000, 240, 1200);
+	parseAssertDeepEqual(1500, 100, 600, 40);
+	parseAssertDeepEqual(1024, 668, 599, 391);
+	parseAssertDeepEqual(1850, 1230, 600, 399);
+	parseAssertDeepEqual(1850, 1234, 600, 400);
+	parseAssertDeepEqual(1918, 1252, 600, 392);
+	parseAssertDeepEqual(3228, 2153, 600, 400);
 
 });
 
