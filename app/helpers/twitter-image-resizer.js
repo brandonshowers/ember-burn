@@ -19,21 +19,21 @@ export function twitterImageResizer(width, height) {
   }
 
   if (aspectRatio >= 1.5) {
-    adjustedHeight = maxWidth * height / width;
+    adjustedHeight = maxWidth / aspectRatio;
     adjustedWidth = Math.round(adjustedHeight) * aspectRatio;
 
     if (adjustedWidth > maxWidth) {
       adjustedWidth = maxWidth;
     }
   } else if (aspectRatio > 1) {
-    adjustedHeight = maxWidth * height / width;
+    adjustedHeight = maxWidth / aspectRatio;
     adjustedWidth = adjustedHeight * aspectRatio;
   } else if (aspectRatio <= 1 && aspectRatio > 0.5) {
     adjustedWidth = maxWidth;
-    adjustedHeight = adjustedWidth * height / width;
+    adjustedHeight = adjustedWidth / aspectRatio;
   } else if (aspectRatio <= 0.5) {
     adjustedWidth = maxHeight * aspectRatio;
-    adjustedHeight = Math.round(adjustedWidth) * height / width;
+    adjustedHeight = Math.round(adjustedWidth) / aspectRatio;
 
     if (adjustedHeight > maxHeight) {
       adjustedHeight = maxHeight;
