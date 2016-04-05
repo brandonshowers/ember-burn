@@ -46,7 +46,6 @@
   "sub": true,
   "strict": false,
   "eqnull": true,
-  "esnext": true,
   "undef": true,
   "unused": true,
   "varstmt": true
