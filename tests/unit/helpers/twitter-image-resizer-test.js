@@ -10,19 +10,19 @@ test('it works', function(assert) {
 
 test('image resizing', function(assert) {
 	let parseExpected,
-			parseMessage,
-			parseAssertEqual;
+		parseMessage,
+		parseAssertDeepEqual;
 
 	parseExpected = function (width, height) {
 		return {
 			adjustedWidth: width,
 			adjustedHeight: height
-		}
+		};
 	};
 
 	parseMessage = function (original_width, original_height, new_width, new_height) {
 		return original_width + " x " + original_height + " should be resized to " + new_width + " x " + new_height;
-	}
+	};
 
 	parseAssertDeepEqual = function (original_width, original_height, new_width, new_height) {
 		assert.deepEqual(
