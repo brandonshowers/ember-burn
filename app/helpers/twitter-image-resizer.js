@@ -3,15 +3,16 @@ import Ember from 'ember';
 export function twitterImageResizer(width, height) {
   let adjustedHeight,
       adjustedWidth,
-      maxHeight = 1200,
-      maxWidth = 600,
       aspectRatio = width / height;
+
+  const MAX_HEIGHT = 1200,
+      MAX_WIDTH = 600;
 
   if (!width || !height) {
     throw new Error('Twitter Image Resizer: height and width required');
   }
 
-  if (width <= maxWidth && height <= maxHeight) {
+  if (width <= MAX_WIDTH && height <= MAX_HEIGHT) {
     return {
       adjustedWidth: width,
       adjustedHeight: height,
@@ -19,24 +20,24 @@ export function twitterImageResizer(width, height) {
   }
 
   if (aspectRatio >= 1.5) {
-    adjustedHeight = maxWidth / aspectRatio;
+    adjustedHeight = MAX_WIDTH / aspectRatio;
     adjustedWidth = Math.round(adjustedHeight) * aspectRatio;
 
-    if (adjustedWidth > maxWidth) {
-      adjustedWidth = maxWidth;
+    if (adjustedWidth > MAX_WIDTH) {
+      adjustedWidth = MAX_WIDTH;
     }
   } else if (aspectRatio > 1) {
-    adjustedHeight = maxWidth / aspectRatio;
+    adjustedHeight = MAX_WIDTH / aspectRatio;
     adjustedWidth = adjustedHeight * aspectRatio;
   } else if (aspectRatio <= 1 && aspectRatio > 0.5) {
-    adjustedWidth = maxWidth;
+    adjustedWidth = MAX_WIDTH;
     adjustedHeight = adjustedWidth / aspectRatio;
   } else if (aspectRatio <= 0.5) {
-    adjustedWidth = maxHeight * aspectRatio;
+    adjustedWidth = MAX_HEIGHT * aspectRatio;
     adjustedHeight = Math.round(adjustedWidth) / aspectRatio;
 
-    if (adjustedHeight > maxHeight) {
-      adjustedHeight = maxHeight;
+    if (adjustedHeight > MAX_HEIGHT) {
+      adjustedHeight = MAX_HEIGHT;
     }
   }
 
