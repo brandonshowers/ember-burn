@@ -44,7 +44,7 @@ export function twitterImageResizer(width, height) {
   return {
     adjustedWidth: Math.round(adjustedWidth),
     adjustedHeight: Math.round(adjustedHeight)
-  }
+  };
 }
 
 export default Ember.Helper.helper(twitterImageResizer);
