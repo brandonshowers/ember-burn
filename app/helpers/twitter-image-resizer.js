@@ -13,7 +13,7 @@ export function twitterImageResizer(width, height) {
     throw new Error('Twitter Image Resizer: height and width required');
   }
 
-  if (ASPECT_RATIO <= 0.25 || ASPECT_RATIO >= 1.7 || width < 100 || height < 100) {
+  if (ASPECT_RATIO <= 0.25 || (ASPECT_RATIO > 1.6 && ASPECT_RATIO < 2) || ASPECT_RATIO > 2 || width < 100 || height < 100) {
     showAsLink = true;
   }
 

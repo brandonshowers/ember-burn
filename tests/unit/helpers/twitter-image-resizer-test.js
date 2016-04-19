@@ -97,12 +97,20 @@ test('image resizing', function(assert) {
   parseAssertDeepEqual(1918, 1252, 600, 392);
   parseAssertDeepEqual(3228, 2153, 600, 400);
 
+  shouldShowAsTextLink(80, 80, true);
+  shouldShowAsTextLink(90, 90, true);
   shouldShowAsTextLink(93, 140, true);
+  shouldShowAsTextLink(99, 99, true);
+  shouldShowAsTextLink(99, 200, true);
   shouldShowAsTextLink(100, 100, false);
+  shouldShowAsTextLink(100, 200, false);
   shouldShowAsTextLink(100, 1000, true);
   shouldShowAsTextLink(100, 1200, true);
   shouldShowAsTextLink(100, 1500, true);
   shouldShowAsTextLink(140, 93, true);
+  shouldShowAsTextLink(186, 280, false);
+  shouldShowAsTextLink(200, 100, false);
+  shouldShowAsTextLink(200, 99, true);
   shouldShowAsTextLink(320, 1977, true);
   shouldShowAsTextLink(400, 1200, false);
   shouldShowAsTextLink(450, 300, false);
