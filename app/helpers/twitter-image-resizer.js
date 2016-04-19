@@ -21,7 +21,7 @@ export function twitterImageResizer(width, height) {
     return {
       adjustedWidth: width,
       adjustedHeight: height,
-      showAsLink: showAsLink
+      showAsLink: showAsLink,
     };
   }
 
