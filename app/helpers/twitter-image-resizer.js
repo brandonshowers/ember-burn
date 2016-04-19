@@ -50,7 +50,7 @@ export function twitterImageResizer(width, height) {
   return {
     adjustedWidth: Math.round(adjustedWidth),
     adjustedHeight: Math.round(adjustedHeight),
-    showAsLink: showAsLink
+    showAsLink: showAsLink,
   };
 }
 
