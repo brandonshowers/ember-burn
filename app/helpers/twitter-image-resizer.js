@@ -3,6 +3,7 @@ import Ember from 'ember';
 export function twitterImageResizer(width, height) {
   let adjustedHeight;
   let adjustedWidth;
+  let showAsLink = false;
 
   const ASPECT_RATIO = width / height;
   const MAX_HEIGHT = 1200;
@@ -12,10 +13,15 @@ export function twitterImageResizer(width, height) {
     throw new Error('Twitter Image Resizer: height and width required');
   }
 
+  if (ASPECT_RATIO <= 0.25 || ASPECT_RATIO >= 1.7 || width < 100 || height < 100) {
+    showAsLink = true;
+  }
+
   if (width <= MAX_WIDTH && height <= MAX_HEIGHT) {
     return {
       adjustedWidth: width,
       adjustedHeight: height,
+      showAsLink: showAsLink
     };
   }
 
@@ -41,10 +47,10 @@ export function twitterImageResizer(width, height) {
     }
   }
 
-
   return {
     adjustedWidth: Math.round(adjustedWidth),
-    adjustedHeight: Math.round(adjustedHeight)
+    adjustedHeight: Math.round(adjustedHeight),
+    showAsLink: showAsLink
   };
 }
 
